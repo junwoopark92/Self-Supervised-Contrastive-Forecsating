@@ -1,8 +1,7 @@
 import os
 import torch
 from models import Autoformer, Transformer, TimesNet, Nonstationary_Transformer, DLinear, NLinear, FEDformer, \
-    Informer, LightTS, Reformer, ETSformer, Pyraformer, PatchTST, MICN, Crossformer, FiLM, AutoConNet, AutoConCI, \
-DLinear_MLP, DLinear_TCN, DLinear_Trans
+    Informer, LightTS, ETSformer, Pyraformer, PatchTST, MICN, Crossformer, FiLM, AutoConNet, AutoConCI
 
 
 class Exp_Basic(object):
@@ -18,7 +17,6 @@ class Exp_Basic(object):
             'FEDformer': FEDformer,
             'Informer': Informer,
             'LightTS': LightTS,
-            'Reformer': Reformer,
             'ETSformer': ETSformer,
             'PatchTST': PatchTST,
             'Pyraformer': Pyraformer,
@@ -27,9 +25,6 @@ class Exp_Basic(object):
             'FiLM': FiLM,
             'AutoConNet': AutoConNet,
             'AutoConCI': AutoConCI,
-            'DLinear_MLP':DLinear_MLP,
-            'DLinear_TCN': DLinear_TCN,
-            'DLinear_Trans': DLinear_Trans,
         }
         self.device = self._acquire_device()
         self.model = self._build_model().to(self.device)
