@@ -1,0 +1,478 @@
+Args in experiment:
+Namespace(AutoCon=True, AutoCon_lambda=0.1, AutoCon_multiscales=[336], AutoCon_wnorm='Decomp', activation='gelu', anomaly_ratio=0.25, batch_size=128, c_out=1, checkpoints='./checkpoints/', d_ff=8, d_layers=1, d_model=8, data='weather', data_path='weather.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=2, embed='timeF', enc_in=1, factor=1, features='S', freq='h', gpu=0, is_training=1, itr=5, label_len=48, learning_rate=0.0001, loss='MSE', lradj='fixed', mask_rate=0.25, model='AutoConNet', model_id='ICLR24_CRV', moving_avg=25, n_heads=8, num_kernels=6, num_workers=2, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=3, pred_len=1440, root_path='./dataset/weather', save=False, seasonal_patterns='Monthly', seq_len=336, target='OT', task_name='long_term_forecast', top_k=5, train_epochs=10, train_ratio=0.6, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:971969
+train 29842
+Auto-correlation values(abs):[1.         0.99989358] ~ [-8.79208186e-05 -4.37837325e-05]
+Autocorrelation calculation time: 0.2350
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 29842
+val 9101
+test 9100
+	iters: 100, epoch: 1 | loss: 1.3633524
+	speed: 0.0501s/iter; left time: 111.8525s
+	iters: 200, epoch: 1 | loss: 1.3137262
+	speed: 0.0429s/iter; left time: 91.3287s
+Epoch: 1 cost time: 11.143255233764648
+Epoch: 1, Steps: 233 Train Loss: 1.3549 (Forecasting Loss:0.9388 + AutoCon Loss:4.1610 x Lambda(0.1)), Vali MSE Loss: 1.7449 Test MSE Loss: 1.5474
+Validation loss decreased (inf --> 1.744930).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 1.2645718
+	speed: 0.0400s/iter; left time: 79.8363s
+	iters: 200, epoch: 2 | loss: 1.1861974
+	speed: 0.0365s/iter; left time: 69.2030s
+Epoch: 2 cost time: 8.916468858718872
+Epoch: 2, Steps: 233 Train Loss: 1.2123 (Forecasting Loss:0.7965 + AutoCon Loss:4.1582 x Lambda(0.1)), Vali MSE Loss: 1.5425 Test MSE Loss: 1.4415
+Validation loss decreased (1.744930 --> 1.542480).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 3 | loss: 1.1154389
+	speed: 0.0397s/iter; left time: 70.0318s
+	iters: 200, epoch: 3 | loss: 1.0593004
+	speed: 0.0384s/iter; left time: 63.9536s
+Epoch: 3 cost time: 9.259238004684448
+Epoch: 3, Steps: 233 Train Loss: 1.1228 (Forecasting Loss:0.7081 + AutoCon Loss:4.1463 x Lambda(0.1)), Vali MSE Loss: 1.3896 Test MSE Loss: 1.4003
+Validation loss decreased (1.542480 --> 1.389566).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 4 | loss: 1.0565382
+	speed: 0.0390s/iter; left time: 59.7161s
+	iters: 200, epoch: 4 | loss: 0.9846439
+	speed: 0.0369s/iter; left time: 52.7985s
+Epoch: 4 cost time: 8.912744522094727
+Epoch: 4, Steps: 233 Train Loss: 1.0585 (Forecasting Loss:0.6462 + AutoCon Loss:4.1230 x Lambda(0.1)), Vali MSE Loss: 1.2944 Test MSE Loss: 1.3748
+Validation loss decreased (1.389566 --> 1.294415).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 5 | loss: 1.0058665
+	speed: 0.0430s/iter; left time: 55.8608s
+	iters: 200, epoch: 5 | loss: 0.9894239
+	speed: 0.0380s/iter; left time: 45.5991s
+Epoch: 5 cost time: 9.505916118621826
+Epoch: 5, Steps: 233 Train Loss: 1.0137 (Forecasting Loss:0.6026 + AutoCon Loss:4.1106 x Lambda(0.1)), Vali MSE Loss: 1.2290 Test MSE Loss: 1.3202
+Validation loss decreased (1.294415 --> 1.228964).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 6 | loss: 1.0487527
+	speed: 0.0408s/iter; left time: 43.4468s
+	iters: 200, epoch: 6 | loss: 0.9009941
+	speed: 0.0368s/iter; left time: 35.5145s
+Epoch: 6 cost time: 9.071410655975342
+Epoch: 6, Steps: 233 Train Loss: 0.9826 (Forecasting Loss:0.5724 + AutoCon Loss:4.1021 x Lambda(0.1)), Vali MSE Loss: 1.1984 Test MSE Loss: 1.3146
+Validation loss decreased (1.228964 --> 1.198444).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 7 | loss: 0.9542403
+	speed: 0.0416s/iter; left time: 34.6876s
+	iters: 200, epoch: 7 | loss: 0.9916104
+	speed: 0.0393s/iter; left time: 28.8249s
+Epoch: 7 cost time: 9.550689458847046
+Epoch: 7, Steps: 233 Train Loss: 0.9607 (Forecasting Loss:0.5513 + AutoCon Loss:4.0946 x Lambda(0.1)), Vali MSE Loss: 1.1756 Test MSE Loss: 1.3232
+Validation loss decreased (1.198444 --> 1.175624).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 8 | loss: 0.9559922
+	speed: 0.0401s/iter; left time: 24.0600s
+	iters: 200, epoch: 8 | loss: 0.9276192
+	speed: 0.0386s/iter; left time: 19.3131s
+Epoch: 8 cost time: 9.151654720306396
+Epoch: 8, Steps: 233 Train Loss: 0.9461 (Forecasting Loss:0.5369 + AutoCon Loss:4.0921 x Lambda(0.1)), Vali MSE Loss: 1.1635 Test MSE Loss: 1.3003
+Validation loss decreased (1.175624 --> 1.163498).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 9 | loss: 0.9937942
+	speed: 0.0410s/iter; left time: 15.0426s
+	iters: 200, epoch: 9 | loss: 0.9304414
+	speed: 0.0399s/iter; left time: 10.6543s
+Epoch: 9 cost time: 9.628004789352417
+Epoch: 9, Steps: 233 Train Loss: 0.9357 (Forecasting Loss:0.5269 + AutoCon Loss:4.0877 x Lambda(0.1)), Vali MSE Loss: 1.1489 Test MSE Loss: 1.2916
+Validation loss decreased (1.163498 --> 1.148939).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 10 | loss: 0.9720841
+	speed: 0.0432s/iter; left time: 5.7877s
+	iters: 200, epoch: 10 | loss: 0.8889713
+	speed: 0.0383s/iter; left time: 1.3035s
+Epoch: 10 cost time: 9.557223081588745
+Epoch: 10, Steps: 233 Train Loss: 0.9284 (Forecasting Loss:0.5196 + AutoCon Loss:4.0877 x Lambda(0.1)), Vali MSE Loss: 1.1538 Test MSE Loss: 1.3173
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0001
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9100
+test shape: (71, 128, 1440, 1) (71, 128, 1440, 1)
+test shape: (9088, 1440, 1) (9088, 1440, 1)
+mse:1.291560173034668, mae:0.8371009826660156, mape:2.527745485305786, mspe:385.5817565917969 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:971969
+train 29842
+Auto-correlation values(abs):[1.         0.99989358] ~ [-8.79208186e-05 -4.37837325e-05]
+Autocorrelation calculation time: 0.3220
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 29842
+val 9101
+test 9100
+	iters: 100, epoch: 1 | loss: 1.3551074
+	speed: 0.0420s/iter; left time: 93.6177s
+	iters: 200, epoch: 1 | loss: 1.2728448
+	speed: 0.0365s/iter; left time: 77.8265s
+Epoch: 1 cost time: 9.257669448852539
+Epoch: 1, Steps: 233 Train Loss: 1.3604 (Forecasting Loss:0.9439 + AutoCon Loss:4.1644 x Lambda(0.1)), Vali MSE Loss: 1.7295 Test MSE Loss: 1.6281
+Validation loss decreased (inf --> 1.729485).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 1.1559793
+	speed: 0.0428s/iter; left time: 85.5514s
+	iters: 200, epoch: 2 | loss: 1.1779695
+	speed: 0.0431s/iter; left time: 81.7650s
+Epoch: 2 cost time: 10.004357814788818
+Epoch: 2, Steps: 233 Train Loss: 1.2247 (Forecasting Loss:0.8119 + AutoCon Loss:4.1284 x Lambda(0.1)), Vali MSE Loss: 1.5080 Test MSE Loss: 1.4389
+Validation loss decreased (1.729485 --> 1.507978).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 3 | loss: 1.1133265
+	speed: 0.0387s/iter; left time: 68.2757s
+	iters: 200, epoch: 3 | loss: 1.1208978
+	speed: 0.0444s/iter; left time: 73.9676s
+Epoch: 3 cost time: 9.805119752883911
+Epoch: 3, Steps: 233 Train Loss: 1.1295 (Forecasting Loss:0.7190 + AutoCon Loss:4.1052 x Lambda(0.1)), Vali MSE Loss: 1.3580 Test MSE Loss: 1.3841
+Validation loss decreased (1.507978 --> 1.357970).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 4 | loss: 1.0587516
+	speed: 0.0395s/iter; left time: 60.5157s
+	iters: 200, epoch: 4 | loss: 1.0516151
+	speed: 0.0404s/iter; left time: 57.8414s
+Epoch: 4 cost time: 9.541902780532837
+Epoch: 4, Steps: 233 Train Loss: 1.0644 (Forecasting Loss:0.6563 + AutoCon Loss:4.0810 x Lambda(0.1)), Vali MSE Loss: 1.2560 Test MSE Loss: 1.3748
+Validation loss decreased (1.357970 --> 1.256021).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 5 | loss: 1.0149860
+	speed: 0.0399s/iter; left time: 51.7932s
+	iters: 200, epoch: 5 | loss: 0.9828774
+	speed: 0.0406s/iter; left time: 48.6559s
+Epoch: 5 cost time: 9.485351085662842
+Epoch: 5, Steps: 233 Train Loss: 1.0200 (Forecasting Loss:0.6132 + AutoCon Loss:4.0671 x Lambda(0.1)), Vali MSE Loss: 1.1885 Test MSE Loss: 1.3820
+Validation loss decreased (1.256021 --> 1.188473).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 6 | loss: 0.9924678
+	speed: 0.0423s/iter; left time: 45.1389s
+	iters: 200, epoch: 6 | loss: 0.9679266
+	speed: 0.0381s/iter; left time: 36.8479s
+Epoch: 6 cost time: 9.42484736442566
+Epoch: 6, Steps: 233 Train Loss: 0.9893 (Forecasting Loss:0.5833 + AutoCon Loss:4.0595 x Lambda(0.1)), Vali MSE Loss: 1.1447 Test MSE Loss: 1.3646
+Validation loss decreased (1.188473 --> 1.144680).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 7 | loss: 0.9163150
+	speed: 0.0409s/iter; left time: 34.0546s
+	iters: 200, epoch: 7 | loss: 0.9478285
+	speed: 0.0372s/iter; left time: 27.2903s
+Epoch: 7 cost time: 9.18588638305664
+Epoch: 7, Steps: 233 Train Loss: 0.9681 (Forecasting Loss:0.5627 + AutoCon Loss:4.0538 x Lambda(0.1)), Vali MSE Loss: 1.1199 Test MSE Loss: 1.3869
+Validation loss decreased (1.144680 --> 1.119922).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 8 | loss: 0.9754986
+	speed: 0.0419s/iter; left time: 25.1483s
+	iters: 200, epoch: 8 | loss: 0.9638213
+	speed: 0.0361s/iter; left time: 18.0479s
+Epoch: 8 cost time: 9.120105743408203
+Epoch: 8, Steps: 233 Train Loss: 0.9529 (Forecasting Loss:0.5483 + AutoCon Loss:4.0458 x Lambda(0.1)), Vali MSE Loss: 1.1000 Test MSE Loss: 1.3601
+Validation loss decreased (1.119922 --> 1.099998).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 9 | loss: 0.9712471
+	speed: 0.0425s/iter; left time: 15.5906s
+	iters: 200, epoch: 9 | loss: 0.9903210
+	speed: 0.0356s/iter; left time: 9.4955s
+Epoch: 9 cost time: 9.188860893249512
+Epoch: 9, Steps: 233 Train Loss: 0.9427 (Forecasting Loss:0.5384 + AutoCon Loss:4.0425 x Lambda(0.1)), Vali MSE Loss: 1.0969 Test MSE Loss: 1.4157
+Validation loss decreased (1.099998 --> 1.096943).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 10 | loss: 0.9487972
+	speed: 0.0399s/iter; left time: 5.3468s
+	iters: 200, epoch: 10 | loss: 0.9339840
+	speed: 0.0394s/iter; left time: 1.3383s
+Epoch: 10 cost time: 9.228336811065674
+Epoch: 10, Steps: 233 Train Loss: 0.9339 (Forecasting Loss:0.5305 + AutoCon Loss:4.0346 x Lambda(0.1)), Vali MSE Loss: 1.0954 Test MSE Loss: 1.4189
+Validation loss decreased (1.096943 --> 1.095420).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9100
+test shape: (71, 128, 1440, 1) (71, 128, 1440, 1)
+test shape: (9088, 1440, 1) (9088, 1440, 1)
+mse:1.4188646078109741, mae:0.8812214732170105, mape:2.5852394104003906, mspe:388.33184814453125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:971969
+train 29842
+Auto-correlation values(abs):[1.         0.99989358] ~ [-8.79208186e-05 -4.37837325e-05]
+Autocorrelation calculation time: 0.3321
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 29842
+val 9101
+test 9100
+	iters: 100, epoch: 1 | loss: 1.3111557
+	speed: 0.0451s/iter; left time: 100.5263s
+	iters: 200, epoch: 1 | loss: 1.2596086
+	speed: 0.0426s/iter; left time: 90.7493s
+Epoch: 1 cost time: 10.171083927154541
+Epoch: 1, Steps: 233 Train Loss: 1.3480 (Forecasting Loss:0.9313 + AutoCon Loss:4.1673 x Lambda(0.1)), Vali MSE Loss: 1.7841 Test MSE Loss: 1.4718
+Validation loss decreased (inf --> 1.784050).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 1.2093291
+	speed: 0.0441s/iter; left time: 88.1937s
+	iters: 200, epoch: 2 | loss: 1.1663762
+	speed: 0.0377s/iter; left time: 71.5110s
+Epoch: 2 cost time: 9.54302716255188
+Epoch: 2, Steps: 233 Train Loss: 1.2022 (Forecasting Loss:0.7903 + AutoCon Loss:4.1193 x Lambda(0.1)), Vali MSE Loss: 1.5782 Test MSE Loss: 1.4116
+Validation loss decreased (1.784050 --> 1.578229).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 3 | loss: 1.1500790
+	speed: 0.0411s/iter; left time: 72.5183s
+	iters: 200, epoch: 3 | loss: 1.1145095
+	speed: 0.0369s/iter; left time: 61.3844s
+Epoch: 3 cost time: 9.168568134307861
+Epoch: 3, Steps: 233 Train Loss: 1.1139 (Forecasting Loss:0.7048 + AutoCon Loss:4.0914 x Lambda(0.1)), Vali MSE Loss: 1.4266 Test MSE Loss: 1.3588
+Validation loss decreased (1.578229 --> 1.426598).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 4 | loss: 1.0390732
+	speed: 0.0394s/iter; left time: 60.3044s
+	iters: 200, epoch: 4 | loss: 1.0290467
+	speed: 0.0358s/iter; left time: 51.2500s
+Epoch: 4 cost time: 8.799479722976685
+Epoch: 4, Steps: 233 Train Loss: 1.0516 (Forecasting Loss:0.6445 + AutoCon Loss:4.0710 x Lambda(0.1)), Vali MSE Loss: 1.3243 Test MSE Loss: 1.3163
+Validation loss decreased (1.426598 --> 1.324347).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 5 | loss: 1.0372519
+	speed: 0.0426s/iter; left time: 55.3579s
+	iters: 200, epoch: 5 | loss: 1.0136808
+	speed: 0.0396s/iter; left time: 47.4437s
+Epoch: 5 cost time: 9.658841371536255
+Epoch: 5, Steps: 233 Train Loss: 1.0078 (Forecasting Loss:0.6021 + AutoCon Loss:4.0563 x Lambda(0.1)), Vali MSE Loss: 1.2591 Test MSE Loss: 1.2990
+Validation loss decreased (1.324347 --> 1.259125).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 6 | loss: 0.9783030
+	speed: 0.0391s/iter; left time: 41.7054s
+	iters: 200, epoch: 6 | loss: 0.9625543
+	speed: 0.0383s/iter; left time: 36.9660s
+Epoch: 6 cost time: 9.11107349395752
+Epoch: 6, Steps: 233 Train Loss: 0.9775 (Forecasting Loss:0.5730 + AutoCon Loss:4.0452 x Lambda(0.1)), Vali MSE Loss: 1.2145 Test MSE Loss: 1.2827
+Validation loss decreased (1.259125 --> 1.214545).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 7 | loss: 0.9762813
+	speed: 0.0412s/iter; left time: 34.3554s
+	iters: 200, epoch: 7 | loss: 0.9900066
+	speed: 0.0374s/iter; left time: 27.4292s
+Epoch: 7 cost time: 9.172583103179932
+Epoch: 7, Steps: 233 Train Loss: 0.9579 (Forecasting Loss:0.5535 + AutoCon Loss:4.0433 x Lambda(0.1)), Vali MSE Loss: 1.1973 Test MSE Loss: 1.2609
+Validation loss decreased (1.214545 --> 1.197317).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 8 | loss: 0.9504451
+	speed: 0.0415s/iter; left time: 24.8828s
+	iters: 200, epoch: 8 | loss: 0.8981203
+	speed: 0.0378s/iter; left time: 18.9029s
+Epoch: 8 cost time: 9.335719108581543
+Epoch: 8, Steps: 233 Train Loss: 0.9437 (Forecasting Loss:0.5400 + AutoCon Loss:4.0372 x Lambda(0.1)), Vali MSE Loss: 1.1737 Test MSE Loss: 1.2593
+Validation loss decreased (1.197317 --> 1.173718).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 9 | loss: 0.9407418
+	speed: 0.0427s/iter; left time: 15.6649s
+	iters: 200, epoch: 9 | loss: 1.0358269
+	speed: 0.0411s/iter; left time: 10.9856s
+Epoch: 9 cost time: 9.700777292251587
+Epoch: 9, Steps: 233 Train Loss: 0.9350 (Forecasting Loss:0.5312 + AutoCon Loss:4.0378 x Lambda(0.1)), Vali MSE Loss: 1.1673 Test MSE Loss: 1.2492
+Validation loss decreased (1.173718 --> 1.167303).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 10 | loss: 0.9541253
+	speed: 0.0421s/iter; left time: 5.6468s
+	iters: 200, epoch: 10 | loss: 0.9650279
+	speed: 0.0396s/iter; left time: 1.3475s
+Epoch: 10 cost time: 9.589946985244751
+Epoch: 10, Steps: 233 Train Loss: 0.9278 (Forecasting Loss:0.5250 + AutoCon Loss:4.0277 x Lambda(0.1)), Vali MSE Loss: 1.1667 Test MSE Loss: 1.1968
+Validation loss decreased (1.167303 --> 1.166750).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9100
+test shape: (71, 128, 1440, 1) (71, 128, 1440, 1)
+test shape: (9088, 1440, 1) (9088, 1440, 1)
+mse:1.1968368291854858, mae:0.7998214960098267, mape:2.7482028007507324, mspe:501.23931884765625 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:971969
+train 29842
+Auto-correlation values(abs):[1.         0.99989358] ~ [-8.79208186e-05 -4.37837325e-05]
+Autocorrelation calculation time: 0.2228
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_3>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 29842
+val 9101
+test 9100
+	iters: 100, epoch: 1 | loss: 1.5012976
+	speed: 0.0386s/iter; left time: 86.2240s
+	iters: 200, epoch: 1 | loss: 1.2309594
+	speed: 0.0359s/iter; left time: 76.4666s
+Epoch: 1 cost time: 8.767895460128784
+Epoch: 1, Steps: 233 Train Loss: 1.3513 (Forecasting Loss:0.9361 + AutoCon Loss:4.1521 x Lambda(0.1)), Vali MSE Loss: 1.7363 Test MSE Loss: 1.5414
+Validation loss decreased (inf --> 1.736272).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 1.1905997
+	speed: 0.0436s/iter; left time: 87.1864s
+	iters: 200, epoch: 2 | loss: 1.1569533
+	speed: 0.0360s/iter; left time: 68.3711s
+Epoch: 2 cost time: 9.357330322265625
+Epoch: 2, Steps: 233 Train Loss: 1.2167 (Forecasting Loss:0.8044 + AutoCon Loss:4.1229 x Lambda(0.1)), Vali MSE Loss: 1.5268 Test MSE Loss: 1.3866
+Validation loss decreased (1.736272 --> 1.526816).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 3 | loss: 1.1192380
+	speed: 0.0457s/iter; left time: 80.6047s
+	iters: 200, epoch: 3 | loss: 1.1240416
+	speed: 0.0406s/iter; left time: 67.6379s
+Epoch: 3 cost time: 10.010755777359009
+Epoch: 3, Steps: 233 Train Loss: 1.1221 (Forecasting Loss:0.7138 + AutoCon Loss:4.0833 x Lambda(0.1)), Vali MSE Loss: 1.3723 Test MSE Loss: 1.3130
+Validation loss decreased (1.526816 --> 1.372349).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 4 | loss: 1.0066530
+	speed: 0.0428s/iter; left time: 65.5845s
+	iters: 200, epoch: 4 | loss: 1.0120476
+	speed: 0.0393s/iter; left time: 56.3368s
+Epoch: 4 cost time: 9.655311584472656
+Epoch: 4, Steps: 233 Train Loss: 1.0547 (Forecasting Loss:0.6486 + AutoCon Loss:4.0609 x Lambda(0.1)), Vali MSE Loss: 1.2755 Test MSE Loss: 1.2637
+Validation loss decreased (1.372349 --> 1.275549).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 5 | loss: 1.0189313
+	speed: 0.0442s/iter; left time: 57.4117s
+	iters: 200, epoch: 5 | loss: 1.0294491
+	speed: 0.0378s/iter; left time: 45.3060s
+Epoch: 5 cost time: 9.642701148986816
+Epoch: 5, Steps: 233 Train Loss: 1.0086 (Forecasting Loss:0.6050 + AutoCon Loss:4.0357 x Lambda(0.1)), Vali MSE Loss: 1.2070 Test MSE Loss: 1.2159
+Validation loss decreased (1.275549 --> 1.206996).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 6 | loss: 0.9796733
+	speed: 0.0414s/iter; left time: 44.1628s
+	iters: 200, epoch: 6 | loss: 0.9760472
+	speed: 0.0397s/iter; left time: 38.3706s
+Epoch: 6 cost time: 9.486688375473022
+Epoch: 6, Steps: 233 Train Loss: 0.9770 (Forecasting Loss:0.5756 + AutoCon Loss:4.0138 x Lambda(0.1)), Vali MSE Loss: 1.1644 Test MSE Loss: 1.1972
+Validation loss decreased (1.206996 --> 1.164392).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 7 | loss: 1.0117716
+	speed: 0.0419s/iter; left time: 34.9269s
+	iters: 200, epoch: 7 | loss: 0.9175523
+	speed: 0.0391s/iter; left time: 28.6679s
+Epoch: 7 cost time: 9.496259450912476
+Epoch: 7, Steps: 233 Train Loss: 0.9560 (Forecasting Loss:0.5557 + AutoCon Loss:4.0029 x Lambda(0.1)), Vali MSE Loss: 1.1347 Test MSE Loss: 1.1967
+Validation loss decreased (1.164392 --> 1.134668).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 8 | loss: 0.9563038
+	speed: 0.0403s/iter; left time: 24.2047s
+	iters: 200, epoch: 8 | loss: 0.9083709
+	speed: 0.0388s/iter; left time: 19.3765s
+Epoch: 8 cost time: 9.386456727981567
+Epoch: 8, Steps: 233 Train Loss: 0.9420 (Forecasting Loss:0.5424 + AutoCon Loss:3.9952 x Lambda(0.1)), Vali MSE Loss: 1.1300 Test MSE Loss: 1.2225
+Validation loss decreased (1.134668 --> 1.129964).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 9 | loss: 0.9561642
+	speed: 0.0419s/iter; left time: 15.3800s
+	iters: 200, epoch: 9 | loss: 0.9526565
+	speed: 0.0370s/iter; left time: 9.8778s
+Epoch: 9 cost time: 9.272624254226685
+Epoch: 9, Steps: 233 Train Loss: 0.9319 (Forecasting Loss:0.5334 + AutoCon Loss:3.9850 x Lambda(0.1)), Vali MSE Loss: 1.1196 Test MSE Loss: 1.2452
+Validation loss decreased (1.129964 --> 1.119578).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 10 | loss: 0.9763958
+	speed: 0.0413s/iter; left time: 5.5388s
+	iters: 200, epoch: 10 | loss: 0.8885916
+	speed: 0.0423s/iter; left time: 1.4371s
+Epoch: 10 cost time: 9.629087448120117
+Epoch: 10, Steps: 233 Train Loss: 0.9247 (Forecasting Loss:0.5270 + AutoCon Loss:3.9773 x Lambda(0.1)), Vali MSE Loss: 1.1118 Test MSE Loss: 1.2348
+Validation loss decreased (1.119578 --> 1.111835).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9100
+test shape: (71, 128, 1440, 1) (71, 128, 1440, 1)
+test shape: (9088, 1440, 1) (9088, 1440, 1)
+mse:1.2347506284713745, mae:0.8192813992500305, mape:2.683772563934326, mspe:454.3411865234375 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:971969
+train 29842
+Auto-correlation values(abs):[1.         0.99989358] ~ [-8.79208186e-05 -4.37837325e-05]
+Autocorrelation calculation time: 0.2268
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_4>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 29842
+val 9101
+test 9100
+	iters: 100, epoch: 1 | loss: 1.3761902
+	speed: 0.0417s/iter; left time: 92.9729s
+	iters: 200, epoch: 1 | loss: 1.2756464
+	speed: 0.0473s/iter; left time: 100.8735s
+Epoch: 1 cost time: 11.345282316207886
+Epoch: 1, Steps: 233 Train Loss: 1.3555 (Forecasting Loss:0.9383 + AutoCon Loss:4.1717 x Lambda(0.1)), Vali MSE Loss: 1.7482 Test MSE Loss: 1.5858
+Validation loss decreased (inf --> 1.748205).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 2 | loss: 1.2170643
+	speed: 0.0415s/iter; left time: 82.9761s
+	iters: 200, epoch: 2 | loss: 1.2504958
+	speed: 0.0369s/iter; left time: 70.0579s
+Epoch: 2 cost time: 9.158345460891724
+Epoch: 2, Steps: 233 Train Loss: 1.2111 (Forecasting Loss:0.7954 + AutoCon Loss:4.1569 x Lambda(0.1)), Vali MSE Loss: 1.5406 Test MSE Loss: 1.4433
+Validation loss decreased (1.748205 --> 1.540572).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 3 | loss: 1.1361899
+	speed: 0.0423s/iter; left time: 74.6585s
+	iters: 200, epoch: 3 | loss: 1.0898950
+	speed: 0.0378s/iter; left time: 62.8700s
+Epoch: 3 cost time: 9.563463926315308
+Epoch: 3, Steps: 233 Train Loss: 1.1208 (Forecasting Loss:0.7070 + AutoCon Loss:4.1375 x Lambda(0.1)), Vali MSE Loss: 1.3954 Test MSE Loss: 1.4116
+Validation loss decreased (1.540572 --> 1.395421).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 4 | loss: 1.0407145
+	speed: 0.0457s/iter; left time: 69.9693s
+	iters: 200, epoch: 4 | loss: 1.0919825
+	speed: 0.0404s/iter; left time: 57.9028s
+Epoch: 4 cost time: 10.06725025177002
+Epoch: 4, Steps: 233 Train Loss: 1.0570 (Forecasting Loss:0.6467 + AutoCon Loss:4.1028 x Lambda(0.1)), Vali MSE Loss: 1.2995 Test MSE Loss: 1.3863
+Validation loss decreased (1.395421 --> 1.299501).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 5 | loss: 0.9858724
+	speed: 0.0402s/iter; left time: 52.2650s
+	iters: 200, epoch: 5 | loss: 1.0087622
+	speed: 0.0381s/iter; left time: 45.7290s
+Epoch: 5 cost time: 9.294193029403687
+Epoch: 5, Steps: 233 Train Loss: 1.0117 (Forecasting Loss:0.6047 + AutoCon Loss:4.0698 x Lambda(0.1)), Vali MSE Loss: 1.2310 Test MSE Loss: 1.3627
+Validation loss decreased (1.299501 --> 1.231008).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 6 | loss: 0.9603558
+	speed: 0.0408s/iter; left time: 43.5271s
+	iters: 200, epoch: 6 | loss: 0.9354336
+	speed: 0.0383s/iter; left time: 36.9833s
+Epoch: 6 cost time: 9.186436414718628
+Epoch: 6, Steps: 233 Train Loss: 0.9802 (Forecasting Loss:0.5757 + AutoCon Loss:4.0447 x Lambda(0.1)), Vali MSE Loss: 1.1878 Test MSE Loss: 1.3375
+Validation loss decreased (1.231008 --> 1.187766).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 7 | loss: 0.9740910
+	speed: 0.0488s/iter; left time: 40.6267s
+	iters: 200, epoch: 7 | loss: 0.9573120
+	speed: 0.0412s/iter; left time: 30.2240s
+Epoch: 7 cost time: 10.314049005508423
+Epoch: 7, Steps: 233 Train Loss: 0.9592 (Forecasting Loss:0.5559 + AutoCon Loss:4.0327 x Lambda(0.1)), Vali MSE Loss: 1.1584 Test MSE Loss: 1.3094
+Validation loss decreased (1.187766 --> 1.158362).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 8 | loss: 0.9274430
+	speed: 0.0401s/iter; left time: 24.0578s
+	iters: 200, epoch: 8 | loss: 0.9464574
+	speed: 0.0373s/iter; left time: 18.6343s
+Epoch: 8 cost time: 9.068268775939941
+Epoch: 8, Steps: 233 Train Loss: 0.9445 (Forecasting Loss:0.5424 + AutoCon Loss:4.0208 x Lambda(0.1)), Vali MSE Loss: 1.1413 Test MSE Loss: 1.2803
+Validation loss decreased (1.158362 --> 1.141336).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 9 | loss: 0.9048988
+	speed: 0.0387s/iter; left time: 14.2171s
+	iters: 200, epoch: 9 | loss: 0.9143696
+	speed: 0.0364s/iter; left time: 9.7213s
+Epoch: 9 cost time: 8.976434707641602
+Epoch: 9, Steps: 233 Train Loss: 0.9341 (Forecasting Loss:0.5332 + AutoCon Loss:4.0085 x Lambda(0.1)), Vali MSE Loss: 1.1319 Test MSE Loss: 1.2715
+Validation loss decreased (1.141336 --> 1.131923).  Saving model ...
+Updating learning rate to 0.0001
+	iters: 100, epoch: 10 | loss: 0.8863139
+	speed: 0.0423s/iter; left time: 5.6628s
+	iters: 200, epoch: 10 | loss: 0.9186995
+	speed: 0.0394s/iter; left time: 1.3401s
+Epoch: 10 cost time: 9.48166823387146
+Epoch: 10, Steps: 233 Train Loss: 0.9275 (Forecasting Loss:0.5271 + AutoCon Loss:4.0037 x Lambda(0.1)), Vali MSE Loss: 1.1238 Test MSE Loss: 1.2420
+Validation loss decreased (1.131923 --> 1.123754).  Saving model ...
+Updating learning rate to 0.0001
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_weather_ftS_sl336_ll48_pl1440_dm8_nh8_el2_dl1_df8_fc1_ebtimeF_dtTrue_Exp_4<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 9100
+test shape: (71, 128, 1440, 1) (71, 128, 1440, 1)
+test shape: (9088, 1440, 1) (9088, 1440, 1)
+mse:1.2420353889465332, mae:0.8296611309051514, mape:2.8335349559783936, mspe:499.82940673828125 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+MSE:1.2768+-0.10712, MAE:0.8334+-0.03746, MAPE:2.6757+-0.15246, MSPE:445.8647+-70.77063, SHAPEDTW:0.0000+-0.00000, TEMPDTW:0.0000+-0.00000

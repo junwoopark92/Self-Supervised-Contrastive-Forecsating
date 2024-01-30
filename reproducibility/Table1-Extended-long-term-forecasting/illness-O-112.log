@@ -1,0 +1,218 @@
+Args in experiment:
+Namespace(AutoCon=True, AutoCon_lambda=1.0, AutoCon_multiscales=[112], AutoCon_wnorm='LastVal', activation='gelu', anomaly_ratio=0.25, batch_size=12, c_out=1, checkpoints='./checkpoints/', d_ff=128, d_layers=1, d_model=128, data='national_illness', data_path='national_illness.csv', dec_in=7, des='Exp', devices='0,1,2,3', distil=True, dropout=0.1, e_layers=3, embed='timeF', enc_in=1, factor=1, features='S', freq='h', gpu=0, is_training=1, itr=5, label_len=7, learning_rate=0.005, loss='MSE', lradj='type1', mask_rate=0.25, model='AutoConNet', model_id='ICLR24_CRV', moving_avg=25, n_heads=8, num_kernels=6, num_workers=2, output_attention=False, p_hidden_dims=[128, 128], p_hidden_layers=2, patience=3, pred_len=112, root_path='./dataset/illness', save=False, seasonal_patterns='Monthly', seq_len=14, target='OT', task_name='long_term_forecast', top_k=5, train_epochs=10, train_ratio=0.6, use_amp=False, use_gpu=True, use_multi_gpu=False)
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:431649
+train 454
+Auto-correlation values(abs):[1.         0.99461233] ~ [-0.0072206  -0.00373154]
+Autocorrelation calculation time: 0.0304
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 454
+val 83
+test 82
+Epoch: 1 cost time: 1.1473946571350098
+Epoch: 1, Steps: 37 Train Loss: 1.8444 (Forecasting Loss:0.4996 + AutoCon Loss:1.3448 x Lambda(1.0)), Vali MSE Loss: 0.4521 Test MSE Loss: 1.5012
+Validation loss decreased (inf --> 0.452102).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 2 cost time: 1.206554651260376
+Epoch: 2, Steps: 37 Train Loss: 1.6288 (Forecasting Loss:0.3309 + AutoCon Loss:1.2978 x Lambda(1.0)), Vali MSE Loss: 0.2938 Test MSE Loss: 1.5121
+Validation loss decreased (0.452102 --> 0.293819).  Saving model ...
+Updating learning rate to 0.0025
+Epoch: 3 cost time: 1.0709874629974365
+Epoch: 3, Steps: 37 Train Loss: 1.5783 (Forecasting Loss:0.2996 + AutoCon Loss:1.2787 x Lambda(1.0)), Vali MSE Loss: 0.2734 Test MSE Loss: 1.5171
+Validation loss decreased (0.293819 --> 0.273374).  Saving model ...
+Updating learning rate to 0.00125
+Epoch: 4 cost time: 1.3449971675872803
+Epoch: 4, Steps: 37 Train Loss: 1.5471 (Forecasting Loss:0.2865 + AutoCon Loss:1.2606 x Lambda(1.0)), Vali MSE Loss: 0.2687 Test MSE Loss: 1.4258
+Validation loss decreased (0.273374 --> 0.268728).  Saving model ...
+Updating learning rate to 0.000625
+Epoch: 5 cost time: 0.8711361885070801
+Epoch: 5, Steps: 37 Train Loss: 1.5379 (Forecasting Loss:0.2846 + AutoCon Loss:1.2534 x Lambda(1.0)), Vali MSE Loss: 0.2919 Test MSE Loss: 1.3701
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0003125
+Epoch: 6 cost time: 0.8108911514282227
+Epoch: 6, Steps: 37 Train Loss: 1.5187 (Forecasting Loss:0.2785 + AutoCon Loss:1.2402 x Lambda(1.0)), Vali MSE Loss: 0.2839 Test MSE Loss: 1.3656
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00015625
+Epoch: 7 cost time: 1.0233840942382812
+Epoch: 7, Steps: 37 Train Loss: 1.5210 (Forecasting Loss:0.2769 + AutoCon Loss:1.2441 x Lambda(1.0)), Vali MSE Loss: 0.2861 Test MSE Loss: 1.3714
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 82
+test shape: (6, 12, 112, 1) (6, 12, 112, 1)
+test shape: (72, 112, 1) (72, 112, 1)
+mse:1.4257640838623047, mae:1.0125447511672974, mape:0.3204580545425415, mspe:0.141407772898674 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:431649
+train 454
+Auto-correlation values(abs):[1.         0.99461233] ~ [-0.0072206  -0.00373154]
+Autocorrelation calculation time: 0.0183
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_1>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 454
+val 83
+test 82
+Epoch: 1 cost time: 0.777493953704834
+Epoch: 1, Steps: 37 Train Loss: 1.8458 (Forecasting Loss:0.5068 + AutoCon Loss:1.3389 x Lambda(1.0)), Vali MSE Loss: 0.3622 Test MSE Loss: 1.5262
+Validation loss decreased (inf --> 0.362223).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 2 cost time: 0.8888728618621826
+Epoch: 2, Steps: 37 Train Loss: 1.7267 (Forecasting Loss:0.4061 + AutoCon Loss:1.3206 x Lambda(1.0)), Vali MSE Loss: 0.3743 Test MSE Loss: 1.7348
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0025
+Epoch: 3 cost time: 1.0464532375335693
+Epoch: 3, Steps: 37 Train Loss: 1.6580 (Forecasting Loss:0.3249 + AutoCon Loss:1.3330 x Lambda(1.0)), Vali MSE Loss: 0.3034 Test MSE Loss: 1.5559
+Validation loss decreased (0.362223 --> 0.303407).  Saving model ...
+Updating learning rate to 0.00125
+Epoch: 4 cost time: 0.9641473293304443
+Epoch: 4, Steps: 37 Train Loss: 1.5974 (Forecasting Loss:0.2934 + AutoCon Loss:1.3040 x Lambda(1.0)), Vali MSE Loss: 0.2914 Test MSE Loss: 1.4971
+Validation loss decreased (0.303407 --> 0.291446).  Saving model ...
+Updating learning rate to 0.000625
+Epoch: 5 cost time: 0.8220789432525635
+Epoch: 5, Steps: 37 Train Loss: 1.5718 (Forecasting Loss:0.2877 + AutoCon Loss:1.2841 x Lambda(1.0)), Vali MSE Loss: 0.3346 Test MSE Loss: 1.3874
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0003125
+Epoch: 6 cost time: 0.8013360500335693
+Epoch: 6, Steps: 37 Train Loss: 1.5787 (Forecasting Loss:0.2859 + AutoCon Loss:1.2928 x Lambda(1.0)), Vali MSE Loss: 0.3116 Test MSE Loss: 1.4272
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00015625
+Epoch: 7 cost time: 1.3465182781219482
+Epoch: 7, Steps: 37 Train Loss: 1.5501 (Forecasting Loss:0.2846 + AutoCon Loss:1.2656 x Lambda(1.0)), Vali MSE Loss: 0.2990 Test MSE Loss: 1.4506
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_1<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 82
+test shape: (6, 12, 112, 1) (6, 12, 112, 1)
+test shape: (72, 112, 1) (72, 112, 1)
+mse:1.4970886707305908, mae:1.0435878038406372, mape:0.3291243314743042, mspe:0.14491520822048187 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:431649
+train 454
+Auto-correlation values(abs):[1.         0.99461233] ~ [-0.0072206  -0.00373154]
+Autocorrelation calculation time: 0.0406
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_2>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 454
+val 83
+test 82
+Epoch: 1 cost time: 1.0477557182312012
+Epoch: 1, Steps: 37 Train Loss: 1.8184 (Forecasting Loss:0.4764 + AutoCon Loss:1.3421 x Lambda(1.0)), Vali MSE Loss: 0.3330 Test MSE Loss: 1.7949
+Validation loss decreased (inf --> 0.333021).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 2 cost time: 1.0053763389587402
+Epoch: 2, Steps: 37 Train Loss: 1.6505 (Forecasting Loss:0.3435 + AutoCon Loss:1.3070 x Lambda(1.0)), Vali MSE Loss: 0.2974 Test MSE Loss: 1.4691
+Validation loss decreased (0.333021 --> 0.297420).  Saving model ...
+Updating learning rate to 0.0025
+Epoch: 3 cost time: 0.9152672290802002
+Epoch: 3, Steps: 37 Train Loss: 1.5679 (Forecasting Loss:0.2948 + AutoCon Loss:1.2731 x Lambda(1.0)), Vali MSE Loss: 0.2956 Test MSE Loss: 1.4186
+Validation loss decreased (0.297420 --> 0.295622).  Saving model ...
+Updating learning rate to 0.00125
+Epoch: 4 cost time: 0.9224848747253418
+Epoch: 4, Steps: 37 Train Loss: 1.5176 (Forecasting Loss:0.2859 + AutoCon Loss:1.2318 x Lambda(1.0)), Vali MSE Loss: 0.3031 Test MSE Loss: 1.3730
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.000625
+Epoch: 5 cost time: 0.9509568214416504
+Epoch: 5, Steps: 37 Train Loss: 1.5054 (Forecasting Loss:0.2813 + AutoCon Loss:1.2241 x Lambda(1.0)), Vali MSE Loss: 0.2886 Test MSE Loss: 1.3997
+Validation loss decreased (0.295622 --> 0.288564).  Saving model ...
+Updating learning rate to 0.0003125
+Epoch: 6 cost time: 1.042954921722412
+Epoch: 6, Steps: 37 Train Loss: 1.4678 (Forecasting Loss:0.2760 + AutoCon Loss:1.1918 x Lambda(1.0)), Vali MSE Loss: 0.2817 Test MSE Loss: 1.4418
+Validation loss decreased (0.288564 --> 0.281737).  Saving model ...
+Updating learning rate to 0.00015625
+Epoch: 7 cost time: 1.03444504737854
+Epoch: 7, Steps: 37 Train Loss: 1.4935 (Forecasting Loss:0.2748 + AutoCon Loss:1.2187 x Lambda(1.0)), Vali MSE Loss: 0.3066 Test MSE Loss: 1.3716
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 7.8125e-05
+Epoch: 8 cost time: 0.9076199531555176
+Epoch: 8, Steps: 37 Train Loss: 1.4766 (Forecasting Loss:0.2750 + AutoCon Loss:1.2016 x Lambda(1.0)), Vali MSE Loss: 0.2904 Test MSE Loss: 1.3970
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 3.90625e-05
+Epoch: 9 cost time: 1.050755500793457
+Epoch: 9, Steps: 37 Train Loss: 1.4959 (Forecasting Loss:0.2719 + AutoCon Loss:1.2241 x Lambda(1.0)), Vali MSE Loss: 0.2905 Test MSE Loss: 1.3982
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 82
+test shape: (6, 12, 112, 1) (6, 12, 112, 1)
+test shape: (72, 112, 1) (72, 112, 1)
+mse:1.441792368888855, mae:1.018835425376892, mape:0.3213008642196655, mspe:0.14120031893253326 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:431649
+train 454
+Auto-correlation values(abs):[1.         0.99461233] ~ [-0.0072206  -0.00373154]
+Autocorrelation calculation time: 0.0343
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_3>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 454
+val 83
+test 82
+Epoch: 1 cost time: 0.9194962978363037
+Epoch: 1, Steps: 37 Train Loss: 1.8274 (Forecasting Loss:0.4707 + AutoCon Loss:1.3567 x Lambda(1.0)), Vali MSE Loss: 0.2985 Test MSE Loss: 1.8977
+Validation loss decreased (inf --> 0.298542).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 2 cost time: 0.9311211109161377
+Epoch: 2, Steps: 37 Train Loss: 1.6049 (Forecasting Loss:0.3212 + AutoCon Loss:1.2837 x Lambda(1.0)), Vali MSE Loss: 0.3668 Test MSE Loss: 1.3343
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0025
+Epoch: 3 cost time: 0.9401500225067139
+Epoch: 3, Steps: 37 Train Loss: 1.5501 (Forecasting Loss:0.2939 + AutoCon Loss:1.2562 x Lambda(1.0)), Vali MSE Loss: 0.3262 Test MSE Loss: 1.3037
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00125
+Epoch: 4 cost time: 0.8267488479614258
+Epoch: 4, Steps: 37 Train Loss: 1.5116 (Forecasting Loss:0.2805 + AutoCon Loss:1.2310 x Lambda(1.0)), Vali MSE Loss: 0.2696 Test MSE Loss: 1.4694
+Validation loss decreased (0.298542 --> 0.269559).  Saving model ...
+Updating learning rate to 0.000625
+Epoch: 5 cost time: 1.068394422531128
+Epoch: 5, Steps: 37 Train Loss: 1.5017 (Forecasting Loss:0.2781 + AutoCon Loss:1.2236 x Lambda(1.0)), Vali MSE Loss: 0.2980 Test MSE Loss: 1.3608
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.0003125
+Epoch: 6 cost time: 0.8169064521789551
+Epoch: 6, Steps: 37 Train Loss: 1.4862 (Forecasting Loss:0.2725 + AutoCon Loss:1.2137 x Lambda(1.0)), Vali MSE Loss: 0.2986 Test MSE Loss: 1.3366
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.00015625
+Epoch: 7 cost time: 0.9431240558624268
+Epoch: 7, Steps: 37 Train Loss: 1.4704 (Forecasting Loss:0.2718 + AutoCon Loss:1.1986 x Lambda(1.0)), Vali MSE Loss: 0.2904 Test MSE Loss: 1.3647
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_3<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 82
+test shape: (6, 12, 112, 1) (6, 12, 112, 1)
+test shape: (72, 112, 1) (72, 112, 1)
+mse:1.4693570137023926, mae:1.0300722122192383, mape:0.32586076855659485, mspe:0.14421233534812927 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+Use GPU: cuda:0
+TimeFeatureEmbedding-wo-freq:   []
+model parameters:431649
+train 454
+Auto-correlation values(abs):[1.         0.99461233] ~ [-0.0072206  -0.00373154]
+Autocorrelation calculation time: 0.0210
+>>>>>>>start training : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_4>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 454
+val 83
+test 82
+Epoch: 1 cost time: 0.8350603580474854
+Epoch: 1, Steps: 37 Train Loss: 1.8369 (Forecasting Loss:0.4904 + AutoCon Loss:1.3465 x Lambda(1.0)), Vali MSE Loss: 0.5638 Test MSE Loss: 1.3235
+Validation loss decreased (inf --> 0.563753).  Saving model ...
+Updating learning rate to 0.005
+Epoch: 2 cost time: 0.884789228439331
+Epoch: 2, Steps: 37 Train Loss: 1.6819 (Forecasting Loss:0.3708 + AutoCon Loss:1.3111 x Lambda(1.0)), Vali MSE Loss: 0.2663 Test MSE Loss: 1.6527
+Validation loss decreased (0.563753 --> 0.266272).  Saving model ...
+Updating learning rate to 0.0025
+Epoch: 3 cost time: 0.831303596496582
+Epoch: 3, Steps: 37 Train Loss: 1.5884 (Forecasting Loss:0.3069 + AutoCon Loss:1.2815 x Lambda(1.0)), Vali MSE Loss: 0.2927 Test MSE Loss: 1.4000
+EarlyStopping counter: 1 out of 3
+Updating learning rate to 0.00125
+Epoch: 4 cost time: 0.8791797161102295
+Epoch: 4, Steps: 37 Train Loss: 1.5556 (Forecasting Loss:0.2935 + AutoCon Loss:1.2620 x Lambda(1.0)), Vali MSE Loss: 0.3092 Test MSE Loss: 1.3558
+EarlyStopping counter: 2 out of 3
+Updating learning rate to 0.000625
+Epoch: 5 cost time: 0.9172606468200684
+Epoch: 5, Steps: 37 Train Loss: 1.5371 (Forecasting Loss:0.2852 + AutoCon Loss:1.2519 x Lambda(1.0)), Vali MSE Loss: 0.2913 Test MSE Loss: 1.3928
+EarlyStopping counter: 3 out of 3
+Early stopping
+>>>>>>>testing : long_term_forecast_ICLR24_CRV_AutoConNet_national_illness_ftS_sl14_ll7_pl112_dm128_nh8_el3_dl1_df128_fc1_ebtimeF_dtTrue_Exp_4<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 82
+test shape: (6, 12, 112, 1) (6, 12, 112, 1)
+test shape: (72, 112, 1) (72, 112, 1)
+mse:1.6527341604232788, mae:1.097925066947937, mape:0.34528252482414246, mspe:0.1567593216896057 dilate:0.0000000, Shapedtw:0.0000000, Temporaldtw:0.0000000
+MSE:1.4973+-0.11302, MAE:1.0406+-0.04241, MAPE:0.3284+-0.01250, MSPE:0.1457+-0.00795, SHAPEDTW:0.0000+-0.00000, TEMPDTW:0.0000+-0.00000
