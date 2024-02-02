@@ -1,0 +1,8 @@
+export CUDA_VISIBLE_DEVICES=$1
+
+nitr=$2
+
+python -u run.py --AutoCon  --AutoCon_multiscales 48 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0   --d_model 16 --d_ff 16 --e_layers 1 --target OT --c_out 1 --root_path ./dataset/exchange_rate --data_path exchange_rate.csv --model_id ICLR24_CRV --model AutoConNet --data exchange_rate --seq_len 48 --label_len 24 --pred_len 48 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.001 --feature S
+python -u run.py --AutoCon  --AutoCon_multiscales 48 360 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0   --d_model 8 --d_ff 16 --e_layers 1 --target OT --c_out 1 --root_path ./dataset/exchange_rate --data_path exchange_rate.csv --model_id ICLR24_CRV --model AutoConNet --data exchange_rate --seq_len 48 --label_len 24 --pred_len 360 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.0001 --feature S
+python -u run.py --AutoCon  --AutoCon_multiscales 720 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0   --d_model 16 --d_ff 16 --e_layers 1 --target OT --c_out 1 --root_path ./dataset/exchange_rate --data_path exchange_rate.csv --model_id ICLR24_CRV --model AutoConNet --data exchange_rate --seq_len 48 --label_len 24 --pred_len 720 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.00001 --feature S
+python -u run.py --AutoCon  --AutoCon_multiscales 48 540 1080 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0   --d_model 8 --d_ff 8 --e_layers 1 --target OT --c_out 1 --root_path ./dataset/exchange_rate --data_path exchange_rate.csv --model_id ICLR24_CRV --model AutoConNet --data exchange_rate --seq_len 48 --label_len 24 --pred_len 1080 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.0001 --feature S

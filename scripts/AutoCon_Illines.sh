@@ -1,0 +1,8 @@
+export CUDA_VISIBLE_DEVICES=$1
+
+nitr=$2
+
+python -u run.py --AutoCon  --AutoCon_multiscales 14 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0  --d_model 16 --d_ff 16 --e_layers 4 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id ICLR24_CRV --model AutoConNet --data national_illness --seq_len 14 --label_len 7 --pred_len 14 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S
+python -u run.py --AutoCon  --AutoCon_multiscales 28 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0  --d_model 16 --d_ff 16 --e_layers 4 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id ICLR24_CRV --model AutoConNet --data national_illness --seq_len 14 --label_len 7 --pred_len 28 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S
+python -u run.py --AutoCon  --AutoCon_multiscales 56 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0  --d_model 128 --d_ff 128 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id ICLR24_CRV --model AutoConNet --data national_illness --seq_len 14 --label_len 7 --pred_len 56 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S
+python -u run.py --AutoCon  --AutoCon_multiscales 112 --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0  --d_model 128 --d_ff 128 --e_layers 3 --target OT --c_out 1 --root_path ./dataset/illness --data_path national_illness.csv --model_id ICLR24_CRV --model AutoConNet --data national_illness --seq_len 14 --label_len 7 --pred_len 112 --enc_in 1 --des 'Exp' --itr $nitr --batch_size 12 --learning_rate 0.005 --feature S

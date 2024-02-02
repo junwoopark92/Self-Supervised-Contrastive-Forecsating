@@ -2,10 +2,7 @@ import os
 
 import numpy as np
 import torch
-import matplotlib.pyplot as plt
 import pandas as pd
-
-plt.switch_backend('agg')
 
 
 def adjust_learning_rate(optimizer, epoch, args):
@@ -76,18 +73,6 @@ class StandardScaler():
 
     def inverse_transform(self, data):
         return (data * self.std) + self.mean
-
-
-def visual(true, preds=None, name='./pic/test.pdf'):
-    """
-    Results visualization
-    """
-    plt.figure()
-    plt.plot(true, label='GroundTruth', linewidth=2)
-    if preds is not None:
-        plt.plot(preds, label='Prediction', linewidth=2)
-    plt.legend()
-    plt.savefig(name, bbox_inches='tight')
 
 
 def adjustment(gt, pred):
