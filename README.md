@@ -40,4 +40,11 @@ $sh ./scripts/AutoCon_Traffic.sh 0 5
 For reproducibility, we include [logs](https://github.com/junwoopark92/Self-Supervised-Contrastive-Forecsating/tree/main/reproducibility/Table1-Extended-long-term-forecasting) of the experimental results in the paper. These logs the evaluation of the same model five times. We observed performance variations based on GPU devices due to CUDA optimization for CNN layers even though a fixed seed. Our experiments were primarily conducted on the RTX 3090.
 
 ## Citations
-
+```
+@inproceedings{park2024self,
+  title={Self-Supervised Contrastive Forecasting},
+  author={Junwoo Park and Daehoon Gwak and Jaegul Choo and Edward Choi},
+  booktitle={Proc. the International Conference on Learning Representations (ICLR)},
+  year={2024}
+}
+```
