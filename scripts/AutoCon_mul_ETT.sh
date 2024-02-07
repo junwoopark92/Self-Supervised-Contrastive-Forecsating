@@ -5,7 +5,6 @@ nitr=$2
 wd=1e-5
 I=96
 
-
 python -u run.py --AutoCon --AutoCon_multiscales 96  --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0 --d_model 16 --d_ff 16 --e_layers 2 --target OT --c_out 7 --root_path ./dataset/ETT-small --data_path ETTh1.csv --model_id ICLR24_CRV --model AutoConCI --data ETTh1 --seq_len $I --label_len 48 --pred_len 96 --enc_in 7 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.01 --feature M
 python -u run.py --AutoCon --AutoCon_multiscales 192  --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0 --d_model 16 --d_ff 16 --e_layers 1 --target OT --c_out 7 --root_path ./dataset/ETT-small --data_path ETTh1.csv --model_id ICLR24_CRV --model AutoConCI --data ETTh1 --seq_len $I --label_len 48 --pred_len 192 --enc_in 7 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.01 --feature M
 python -u run.py --AutoCon --AutoCon_multiscales 336  --AutoCon_wnorm LastVal  --AutoCon_lambda 1.0 --d_model 16 --d_ff 16 --e_layers 1 --target OT --c_out 7 --root_path ./dataset/ETT-small --data_path ETTh1.csv --model_id ICLR24_CRV --model AutoConCI --data ETTh1 --seq_len $I --label_len 48 --pred_len 336 --enc_in 7 --des 'Exp' --itr $nitr --batch_size 64 --learning_rate 0.01 --feature M
