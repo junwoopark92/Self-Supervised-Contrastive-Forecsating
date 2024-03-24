@@ -1,6 +1,6 @@
-# Self-Supervised-Contrastive-Forecasting
+# Self-Supervised Contrastive Learning for Long-term Forecasting
 
-This is an official repository for the paper, titled [Self-Supervised-Contrastive-Forecasting](https://openreview.net/forum?id=nBCuRzjqK7), accepted at ICLR'24.
+This is an official repository for the paper, titled [Self-Supervised Contrastive Learning for Long-term Forecasting](https://openreview.net/forum?id=nBCuRzjqK7), accepted at ICLR'24.
 
 Our repo includes Autocorrelation-based Contrastive Loss (AutoCon) and Model Architecture (AutoConNet).
 
@@ -42,7 +42,7 @@ For reproducibility, we provide [logs](https://github.com/junwoopark92/Self-Supe
 ## Citations
 ```
 @inproceedings{park2024self,
-  title={Self-Supervised Contrastive Forecasting},
+  title={Self-Supervised Contrastive Learning for Long-term Forecasting},
   author={Junwoo Park and Daehoon Gwak and Jaegul Choo and Edward Choi},
   booktitle={Proc. the International Conference on Learning Representations (ICLR)},
   year={2024}
