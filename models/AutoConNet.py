@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import numpy as np
 from layers.Embed import DataEmbedding
 from layers.dilated_conv import DilatedConvEncoder
 
@@ -155,12 +154,9 @@ class Model(nn.Module):
         else:
             raise Exception()
 
-        if self.ablation != 2:
-            enc_out = self.enc_embedding(long_x, x_mark_enc)
-            enc_out = enc_out.transpose(1, 2)  # B x Ch x T
-            repr = self.repr_dropout(self.feature_extractor(enc_out)).transpose(1, 2) # B x Co x T
-        else:
-            repr = None
+        enc_out = self.enc_embedding(long_x, x_mark_enc)
+        enc_out = enc_out.transpose(1, 2)  # B x Ch x T
+        repr = self.repr_dropout(self.feature_extractor(enc_out)).transpose(1, 2) # B x Co x T
 
         return repr
 

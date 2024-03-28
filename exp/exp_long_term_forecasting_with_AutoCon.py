@@ -40,7 +40,7 @@ class Exp_Long_Term_Forecast_with_AutoCon(Exp_Basic):
         for i_ch in range(target_data.shape[-1]):
             acf_values.append(acf(target_data[..., i_ch], nlags=len(target_data)))
 
-        if self.args.model == 'AutoConCI':
+        if self.args.model == 'AutoConCI':  # For multivariate forecasting
             acf_values = np.stack(acf_values, axis=0)
             loss = AutoConCI(args.batch_size, args.seq_len, np.abs(acf_values), temperature=1.0, base_temperature=1.0)
             print(f'Auto-correlation values(abs):{acf_values[0, :2]} ~ {acf_values[0, -2:]}')
