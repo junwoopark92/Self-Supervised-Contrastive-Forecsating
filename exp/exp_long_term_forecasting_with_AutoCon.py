@@ -123,9 +123,6 @@ class Exp_Long_Term_Forecast_with_AutoCon(Exp_Basic):
         model_optim = self._select_optimizer()
         criterion = self._select_criterion()
 
-        if self.args.use_amp:
-            scaler = torch.cuda.amp.GradScaler()
-
         for epoch in range(self.args.train_epochs):
             iter_count = 0
             train_log = dict()

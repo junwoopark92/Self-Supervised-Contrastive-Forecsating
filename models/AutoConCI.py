@@ -39,9 +39,7 @@ class series_decomp(nn.Module):
 
 
 class Model(nn.Module):
-    """
-    Just one Linear layer
-    """
+
     def __init__(self, configs):
         super(Model, self).__init__()
         self.seq_len = configs.seq_len
@@ -102,7 +100,6 @@ class Model(nn.Module):
         B, T, C = long_x.shape
         long_x = long_x.permute(0, 2, 1).reshape(B * C, T, 1)
         enc_out = self.enc_embedding(long_x, x_mark_enc.squeeze(1).repeat(1, C, 1, 1).reshape(B*C, T, -1))  # B * C, T, D
-        # enc_out = self.enc_embedding(long_x, None)
         enc_out = enc_out.transpose(1, 2)
 
         repr = self.repr_dropout(self.feature_extractor(enc_out)).transpose(1, 2)  # (B * C, T, D)

@@ -40,9 +40,6 @@ class series_decomp(nn.Module):
 
 
 class Model(nn.Module):
-    """
-    Just one Linear layer
-    """
     def __init__(self, configs):
         super(Model, self).__init__()
         self.seq_len = configs.seq_len
@@ -118,7 +115,6 @@ class Model(nn.Module):
 
         trend_outs = torch.stack(trend_outs, dim=-1).sum(dim=-1)
 
-        # Seasonal Prediction: NLinear
         season_out = self.Linear(short_x.permute(0, 2, 1)).permute(0, 2, 1)
 
         if self.AutoCon_wnorm == 'ReVIN':
